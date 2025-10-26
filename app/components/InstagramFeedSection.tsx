@@ -1,7 +1,6 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import InstagramCarousel from './InstagramCarousel';
 import { groupHashtags, type HashtagGroup } from '@/lib/hashtag-grouper';
 
 export default function InstagramFeedSection() {
