@@ -6,11 +6,11 @@ Site-specific documentation for **cartucheraspormayor.com.ar** landing page.
 
 ## Project Overview
 
-This is **Domain 2** of the Borisiuk multi-domain landing page system - a Next.js-based landing page for Natacha Borysiuk's industrial bag manufacturing business, focusing on wholesale pencil cases (cartucheras por mayor).
+This is **Domain 2** of the Borisiuk multi-domain landing page system - a Next.js-based landing page for industrial bag manufacturing business, focusing on wholesale pencil cases (cartucheras por mayor).
 
 **Business**: Fábrica de mochilas, bolsos, cartucheras industriales
 **Instagram**: @fabricamosmochilas
-**Contact**: Natacha Borysiuk - (011) 61030569 - natacha.borysiuk@gmail.com
+**Contact**: (11) 5656-7373 - FabricamosMochilas@gmail.com
 **Domain**: cartucheraspormayor.com.ar
 **SEO Focus**: Cartucheras por mayor, cartucheras personalizadas, cartucheras con logo
 

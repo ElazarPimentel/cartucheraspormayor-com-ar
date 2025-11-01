@@ -14,7 +14,6 @@ export const metadata: Metadata = {
     'cartucheras Argentina',
     'cartucheras al por mayor',
   ],
-  authors: [{ name: 'Cartucheras por Mayor' }],
   openGraph: {
     type: 'website',
     locale: 'es_AR',

@@ -149,7 +149,7 @@ export default function Home() {
               <a href="https://wa.me/541156567373" className="btn-primary btn-large">
                 📱 WhatsApp: 11-5656-7373
               </a>
-              <a href="mailto:fabricamosmochilas@gmail.com" className="btn-secondary btn-large">
+              <a href="mailto:FabricamosMochilas@gmail.com" className="btn-secondary btn-large">
                 📧 Email
               </a>
             </div>
@@ -168,7 +168,7 @@ export default function Home() {
           <p>© 2025 Cartucheras por Mayor • Fábrica Argentina</p>
           <div className="footer-links">
             <a href="https://wa.me/541156567373">WhatsApp</a>
-            <a href="mailto:fabricamosmochilas@gmail.com">Email</a>
+            <a href="mailto:FabricamosMochilas@gmail.com">Email</a>
             <a href="https://www.instagram.com/fabricamosmochilas/">Instagram</a>
           </div>
         </div>
