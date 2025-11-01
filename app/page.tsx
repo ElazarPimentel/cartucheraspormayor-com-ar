@@ -1,17 +1,77 @@
 import InstagramFeedSection from './components/InstagramFeedSection';
 
 export default function Home() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Cartucheras por Mayor Argentina",
+    "description": "Fábrica directa de cartucheras personalizadas para escuelas, empresas y organizaciones. Stock permanente y producción a medida.",
+    "url": "https://cartucheraspormayor.com.ar",
+    "telephone": "+54-11-5656-7373",
+    "email": "FabricamosMochilas@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "AR",
+      "addressLocality": "Argentina"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "addressCountry": "AR"
+    },
+    "sameAs": [
+      "https://www.instagram.com/fabricamosmochilas"
+    ],
+    "areaServed": {
+      "@type": "Country",
+      "name": "Argentina"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Productos de Cartuchería",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Product",
+            "name": "Cartucheras Escolares",
+            "description": "Cartucheras personalizadas para escuelas con logo. Tela impermeable y cierre resistente."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Product",
+            "name": "Cartucheras Empresariales",
+            "description": "Cartucheras premium con logo bordado para regalos corporativos."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Product",
+            "name": "Cartucheras Personalizadas",
+            "description": "Diseño a medida según especificaciones del cliente. Producción exclusiva."
+          }
+        }
+      ]
+    }
+  };
+
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       {/* Hero Section with Gradient */}
       <section className="hero">
         <div className="container">
           <div className="hero-content">
             <div className="badge">✏️ Fábrica Directa</div>
             <h1>
-              <span className="gradient-text">Cartucheras</span>
+              <span className="gradient-text">Cartucheras por Mayor</span>
               <br />
-              <span className="outline-text">por Mayor</span>
+              <span className="outline-text">Argentina</span>
             </h1>
             <p className="hero-subtitle">
               Personalizá con tu logo • Stock permanente • Entrega inmediata

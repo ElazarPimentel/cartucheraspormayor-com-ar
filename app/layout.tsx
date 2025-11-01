@@ -13,7 +13,14 @@ export const metadata: Metadata = {
     'cartucheras empresariales',
     'cartucheras Argentina',
     'cartucheras al por mayor',
+    'cartucheras industriales',
+    'estuches escolares',
+    'cartucheras para empresas',
+    'producción de cartucheras',
   ],
+  alternates: {
+    canonical: 'https://cartucheraspormayor.com.ar',
+  },
   openGraph: {
     type: 'website',
     locale: 'es_AR',
@@ -21,6 +28,31 @@ export const metadata: Metadata = {
     title: 'Cartucheras por Mayor Argentina',
     description: 'Fábrica directa de cartucheras personalizadas. Stock permanente y producción a medida.',
     siteName: 'Cartucheras por Mayor',
+    images: [
+      {
+        url: 'https://cartucheraspormayor.com.ar/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Cartucheras por Mayor Argentina',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Cartucheras por Mayor Argentina | Fábrica de Cartucheras Personalizadas',
+    description: 'Fábrica directa de cartucheras personalizadas. Stock permanente y producción a medida.',
+    images: ['https://cartucheraspormayor.com.ar/og-image.png'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
 };
 
