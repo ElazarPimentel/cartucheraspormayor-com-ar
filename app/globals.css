@@ -678,10 +678,11 @@ footer p {
   backdrop-filter: blur(20px);
   border-radius: var(--radius-lg);
   box-shadow: 0 10px 40px rgba(102, 126, 234, 0.3), 0 4px 12px rgba(0, 0, 0, 0.15);
-  background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%) !important;
-  -webkit-background-clip: text !important;
-  -webkit-text-fill-color: transparent !important;
-  background-clip: text !important;
+  /* DARK TEXT - CLEARLY VISIBLE */
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   position: relative;
 }
 
