@@ -1,6 +1,6 @@
 /**
  * Instagram API Integration via Centralized Server
- * Fetches posts from boris.pensanta.com (EC2 Instagram API proxy)
+ * Fetches posts from www.pensanta.com.ar/borisiuk/api (Hostinger PHP API)
  */
 
 export interface InstagramPost {
@@ -20,8 +20,9 @@ export interface InstagramFeedResponse {
   error?: string;
 }
 
-// Centralized Instagram API endpoint (deployed on EC2)
-const INSTAGRAM_API_URL = process.env.NEXT_PUBLIC_INSTAGRAM_API_URL || 'https://boris.pensanta.com';
+// Centralized Instagram API endpoint (Hostinger)
+const INSTAGRAM_API_URL = process.env.NEXT_PUBLIC_INSTAGRAM_API_URL || 'https://pensanta.com.ar/borisiuk/api';
+const INSTAGRAM_API_KEY = process.env.NEXT_PUBLIC_INSTAGRAM_API_KEY || '';
 
 /**
  * Fetch all media from centralized Instagram API server
@@ -31,6 +32,9 @@ export async function fetchInstagramMedia(limit: number = 50): Promise<Instagram
     const url = `${INSTAGRAM_API_URL}/api/instagram?limit=${limit}`;
 
     const response = await fetch(url, {
+      headers: {
+        'X-API-Key': INSTAGRAM_API_KEY,
+      },
       next: { revalidate: 3600 }, // Cache for 1 hour
     });
 
@@ -61,6 +65,9 @@ export async function fetchPostsByHashtag(hashtag: string, limit: number = 12): 
     const url = `${INSTAGRAM_API_URL}/api/instagram/${normalizedHashtag}?limit=${limit}`;
 
     const response = await fetch(url, {
+      headers: {
+        'X-API-Key': INSTAGRAM_API_KEY,
+      },
       next: { revalidate: 3600 }, // Cache for 1 hour
     });
 

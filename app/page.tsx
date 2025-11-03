@@ -223,14 +223,20 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer>
-        <div className="container">
-          <p>© 2025 Cartucheras por Mayor • Fábrica Argentina</p>
-          <div className="footer-links">
-            <a href="https://wa.me/541156567373">WhatsApp</a>
-            <a href="mailto:FabricamosMochilas@gmail.com">Email</a>
-            <a href="https://www.instagram.com/fabricamosmochilas/">Instagram</a>
-          </div>
+      <footer role="contentinfo">
+        <div className="footer-content">
+          <p className="footer-copyright">&copy; {new Date().getFullYear()} Cartucheras por Mayor - Todos los derechos reservados</p>
+          <p className="footer-version">v6.16.1</p>
+          <small className="footer-credit">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M12 2L2 7l10 5 10-5-10-5z" />
+              <path d="M2 17l10 5 10-5M2 12l10 5 10-5" />
+            </svg>
+            Digitally carved by{' '}
+            <a href="https://Pensanta.com" target="_blank" rel="noopener noreferrer">
+              Pensanta.com
+            </a>
+          </small>
         </div>
       </footer>
     </main>
