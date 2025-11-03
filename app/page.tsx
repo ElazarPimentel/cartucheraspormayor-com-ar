@@ -226,7 +226,7 @@ export default function Home() {
       <footer role="contentinfo">
         <div className="footer-content">
           <p className="footer-copyright">&copy; {new Date().getFullYear()} Cartucheras por Mayor - Todos los derechos reservados</p>
-          <p className="footer-version">v6.16.1</p>
+          <p className="footer-version">v1.0.1</p>
           <small className="footer-credit">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <path d="M12 2L2 7l10 5 10-5-10-5z" />
