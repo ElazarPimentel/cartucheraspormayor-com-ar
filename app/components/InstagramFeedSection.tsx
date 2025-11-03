@@ -8,6 +8,7 @@ export default function InstagramFeedSection() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    console.log("[cartucheraspormayor-com-ar] VERSION: 1.0.1");
     async function loadAndGroupPosts() {
       try {
         // Fetch all posts from the API
