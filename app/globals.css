@@ -549,7 +549,7 @@ footer p {
    =================================== */
 .instagram-section {
   padding: 100px 0;
-  background: white;
+  background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
   position: relative;
 }
 

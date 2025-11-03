@@ -103,6 +103,43 @@ export default function Home() {
         <div className="wave-divider"></div>
       </section>
 
+      {/* CTA Section */}
+      <section className="cta-section">
+        <div className="container">
+          <div className="cta-content">
+            <h2>¿Listo para tu pedido?</h2>
+            <p>Cotización en menos de 24hs • Sin compromiso • Asesoramiento personalizado</p>
+            <div className="cta-buttons">
+              <a href="https://wa.me/541156567373" className="btn-primary btn-large">
+                📱 WhatsApp: 11-5656-7373
+              </a>
+              <a href="mailto:FabricamosMochilas@gmail.com" className="btn-secondary btn-large">
+                📧 Email
+              </a>
+            </div>
+            <div className="contact-info">
+              <span>📞 (11) 5656-7373</span>
+              <span>📍 Fabricamos en Argentina</span>
+              <span>⭐ +10 años en el mercado</span>
+              <span>💯 Garantía de calidad</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Instagram Gallery Section */}
+      <section className="instagram-section">
+        <div className="container">
+          <h2 className="section-title">
+            <span className="gradient-text">Nuestros Trabajos</span>
+          </h2>
+          <p className="instagram-intro">
+            Seguinos en <a href="https://www.instagram.com/fabricamosmochilas/" target="_blank" rel="noopener noreferrer">@fabricamosmochilas</a>
+          </p>
+          <InstagramFeedSection />
+        </div>
+      </section>
+
       {/* Features Section */}
       <section className="features">
         <div className="container">
@@ -128,19 +165,6 @@ export default function Home() {
               <p>Llegamos a toda Argentina con logística propia.</p>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Instagram Gallery Section */}
-      <section className="instagram-section">
-        <div className="container">
-          <h2 className="section-title">
-            <span className="gradient-text">Nuestros Trabajos</span>
-          </h2>
-          <p className="instagram-intro">
-            Seguinos en <a href="https://www.instagram.com/fabricamosmochilas/" target="_blank" rel="noopener noreferrer">@fabricamosmochilas</a>
-          </p>
-          <InstagramFeedSection />
         </div>
       </section>
 
@@ -194,29 +218,6 @@ export default function Home() {
               <a href="https://wa.me/541156567373?text=Hola! Me interesa cotizar cartucheras personalizadas" className="product-cta">
                 Cotizar ahora →
               </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="cta-section">
-        <div className="container">
-          <div className="cta-content">
-            <h2>¿Listo para tu pedido?</h2>
-            <p>Cotización en menos de 24hs • Sin compromiso • Asesoramiento personalizado</p>
-            <div className="cta-buttons">
-              <a href="https://wa.me/541156567373" className="btn-primary btn-large">
-                📱 WhatsApp: 11-5656-7373
-              </a>
-              <a href="mailto:FabricamosMochilas@gmail.com" className="btn-secondary btn-large">
-                📧 Email
-              </a>
-            </div>
-            <div className="contact-info">
-              <span>📍 Fabricamos en Argentina</span>
-              <span>⭐ +10 años en el mercado</span>
-              <span>💯 Garantía de calidad</span>
             </div>
           </div>
         </div>

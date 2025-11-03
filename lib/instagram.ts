@@ -21,8 +21,8 @@ export interface InstagramFeedResponse {
 }
 
 // Centralized Instagram API endpoint (Hostinger)
-const INSTAGRAM_API_URL = process.env.NEXT_PUBLIC_INSTAGRAM_API_URL || 'https://pensanta.com.ar/borisiuk/api';
-const INSTAGRAM_API_KEY = process.env.NEXT_PUBLIC_INSTAGRAM_API_KEY || '';
+const INSTAGRAM_API_URL = 'https://pensanta.com.ar/borisiuk/api';
+const INSTAGRAM_API_KEY = process.env.API_KEY || '';
 
 /**
  * Fetch all media from centralized Instagram API server
