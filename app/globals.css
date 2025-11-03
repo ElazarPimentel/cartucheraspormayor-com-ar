@@ -139,6 +139,16 @@ main {
   text-shadow: 0 4px 20px rgba(255, 255, 255, 0.3);
 }
 
+/* OVERRIDE for Instagram title - DARK TEXT */
+.gradient-text.instagram-title {
+  background: none !important;
+  -webkit-background-clip: initial !important;
+  -webkit-text-fill-color: #1a202c !important;
+  background-clip: initial !important;
+  color: #1a202c !important;
+  text-shadow: none !important;
+}
+
 .outline-text {
   color: transparent;
   -webkit-text-stroke: 3px rgba(255, 255, 255, 0.95);
@@ -674,16 +684,13 @@ footer p {
 .instagram-title {
   display: inline-block;
   padding: 20px 50px;
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(20px);
   border-radius: var(--radius-lg);
-  box-shadow: 0 10px 40px rgba(102, 126, 234, 0.3), 0 4px 12px rgba(0, 0, 0, 0.15);
-  /* DARK TEXT - CLEARLY VISIBLE */
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
   position: relative;
+  /* SOLID DARK COLOR - NO GRADIENTS */
+  color: #1a202c !important;
+  font-weight: 900 !important;
+  background: transparent !important;
+  -webkit-text-fill-color: #1a202c !important;
 }
 
 .instagram-title::before {
@@ -694,6 +701,7 @@ footer p {
   border-radius: var(--radius-lg);
   z-index: -1;
   box-shadow: 0 10px 40px rgba(102, 126, 234, 0.3), 0 4px 12px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(20px);
 }
 
 .instagram-carousel {
