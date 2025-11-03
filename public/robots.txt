@@ -1,0 +1,23 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+Disallow: /api/
+
+# Sitemaps
+Sitemap: https://cartucheraspormayor.com.ar/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 1
+
+# Common bots
+User-agent: Googlebot
+Allow: /
+Disallow: /api/
+
+User-agent: Bingbot
+Allow: /
+Disallow: /api/
+
+User-agent: Slurp
+Allow: /
+Disallow: /api/

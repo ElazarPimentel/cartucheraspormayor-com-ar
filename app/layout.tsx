@@ -1,9 +1,21 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import './globals.css';
 
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+  userScalable: true,
+  themeColor: '#667eea',
+};
+
 export const metadata: Metadata = {
-  title: 'Cartucheras por Mayor Argentina | Fábrica de Cartucheras Personalizadas',
-  description: 'Cartucheras por mayor para escuelas, empresas y organizaciones. Fábrica directa de cartucheras personalizadas con logo. Entrega en toda Argentina. Stock permanente y producción a medida.',
+  metadataBase: new URL('https://cartucheraspormayor.com.ar'),
+  title: {
+    default: 'Cartucheras por Mayor Argentina | Fábrica de Cartucheras Personalizadas',
+    template: '%s | Cartucheras por Mayor Argentina',
+  },
+  description: 'Cartucheras por mayor para escuelas, empresas y organizaciones. Fábrica directa de cartucheras personalizadas con logo. Entrega en toda Argentina. Stock permanente desde 50 unidades y producción a medida.',
   keywords: [
     'cartucheras por mayor',
     'cartucheras personalizadas',
@@ -17,43 +29,70 @@ export const metadata: Metadata = {
     'estuches escolares',
     'cartucheras para empresas',
     'producción de cartucheras',
+    'cartucheras bordadas',
+    'cartucheras impresas',
+    'cartucheras tela impermeable',
+    'cartucheras regalos corporativos',
+    'cartucheras para colegios',
+    'cartucheras promocionales',
+    'mayorista cartucheras',
+    'fabricante cartucheras',
   ],
+  authors: [{ name: 'Cartucheras por Mayor Argentina' }],
+  creator: 'Cartucheras por Mayor Argentina',
+  publisher: 'Cartucheras por Mayor Argentina',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
   alternates: {
-    canonical: 'https://cartucheraspormayor.com.ar',
+    canonical: '/',
   },
   openGraph: {
     type: 'website',
     locale: 'es_AR',
     url: 'https://cartucheraspormayor.com.ar',
-    title: 'Cartucheras por Mayor Argentina',
-    description: 'Fábrica directa de cartucheras personalizadas. Stock permanente y producción a medida.',
-    siteName: 'Cartucheras por Mayor',
+    title: 'Cartucheras por Mayor Argentina | Fábrica de Cartucheras Personalizadas',
+    description: 'Fábrica directa de cartucheras personalizadas con logo. Stock permanente desde 50 unidades y producción a medida. Envíos a toda Argentina.',
+    siteName: 'Cartucheras por Mayor Argentina',
     images: [
       {
-        url: 'https://cartucheraspormayor.com.ar/og-image.png',
+        url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Cartucheras por Mayor Argentina',
+        alt: 'Cartucheras por Mayor Argentina - Fábrica de Cartucheras Personalizadas',
+        type: 'image/png',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Cartucheras por Mayor Argentina | Fábrica de Cartucheras Personalizadas',
-    description: 'Fábrica directa de cartucheras personalizadas. Stock permanente y producción a medida.',
-    images: ['https://cartucheraspormayor.com.ar/og-image.png'],
+    description: 'Fábrica directa de cartucheras personalizadas con logo. Stock permanente desde 50 unidades. Envíos a toda Argentina.',
+    images: ['/og-image.png'],
+    creator: '@fabricamosmochilas',
   },
   robots: {
     index: true,
     follow: true,
+    nocache: false,
     googleBot: {
       index: true,
       follow: true,
+      noimageindex: false,
       'max-video-preview': -1,
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
   },
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+    apple: '/apple-touch-icon.png',
+  },
+  manifest: '/site.webmanifest',
+  category: 'business',
 };
 
 export default function RootLayout({

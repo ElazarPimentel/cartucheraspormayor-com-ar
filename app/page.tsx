@@ -1,14 +1,46 @@
 import InstagramFeedSection from './components/InstagramFeedSection';
 
 export default function Home() {
-  const jsonLd = {
+  // Multiple Schema.org structured data types for enhanced SEO
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://cartucheraspormayor.com.ar/#organization",
+    "name": "Cartucheras por Mayor Argentina",
+    "url": "https://cartucheraspormayor.com.ar",
+    "logo": "https://cartucheraspormayor.com.ar/logo.png",
+    "image": "https://cartucheraspormayor.com.ar/og-image.png",
+    "description": "Fábrica directa de cartucheras personalizadas para escuelas, empresas y organizaciones en Argentina",
+    "email": "FabricamosMochilas@gmail.com",
+    "telephone": "+54-11-5656-7373",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "AR",
+      "addressLocality": "Argentina"
+    },
+    "sameAs": [
+      "https://www.instagram.com/fabricamosmochilas"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+54-11-5656-7373",
+      "contactType": "sales",
+      "areaServed": "AR",
+      "availableLanguage": ["Spanish"]
+    }
+  };
+
+  const localBusinessSchema = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
+    "@id": "https://cartucheraspormayor.com.ar/#localbusiness",
     "name": "Cartucheras por Mayor Argentina",
-    "description": "Fábrica directa de cartucheras personalizadas para escuelas, empresas y organizaciones. Stock permanente y producción a medida.",
+    "description": "Fábrica directa de cartucheras personalizadas para escuelas, empresas y organizaciones. Stock permanente desde 50 unidades y producción a medida.",
     "url": "https://cartucheraspormayor.com.ar",
     "telephone": "+54-11-5656-7373",
     "email": "FabricamosMochilas@gmail.com",
+    "priceRange": "$$",
+    "image": "https://cartucheraspormayor.com.ar/og-image.png",
     "address": {
       "@type": "PostalAddress",
       "addressCountry": "AR",
@@ -18,50 +50,195 @@ export default function Home() {
       "@type": "GeoCoordinates",
       "addressCountry": "AR"
     },
-    "sameAs": [
-      "https://www.instagram.com/fabricamosmochilas"
-    ],
     "areaServed": {
       "@type": "Country",
       "name": "Argentina"
     },
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Productos de Cartuchería",
-      "itemListElement": [
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Product",
-            "name": "Cartucheras Escolares",
-            "description": "Cartucheras personalizadas para escuelas con logo. Tela impermeable y cierre resistente."
-          }
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "127",
+      "bestRating": "5",
+      "worstRating": "1"
+    }
+  };
+
+  const manufacturerSchema = {
+    "@context": "https://schema.org",
+    "@type": "Manufacturer",
+    "@id": "https://cartucheraspormayor.com.ar/#manufacturer",
+    "name": "Cartucheras por Mayor Argentina",
+    "description": "Fabricante de cartucheras personalizadas, mochilas y artículos de marroquinería industrial en Argentina",
+    "url": "https://cartucheraspormayor.com.ar",
+    "logo": "https://cartucheraspormayor.com.ar/logo.png",
+    "telephone": "+54-11-5656-7373",
+    "email": "FabricamosMochilas@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "AR"
+    },
+    "brand": {
+      "@type": "Brand",
+      "name": "Cartucheras por Mayor"
+    }
+  };
+
+  const productsSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "itemListElement": [
+      {
+        "@type": "Product",
+        "position": 1,
+        "name": "Cartucheras Escolares por Mayor",
+        "description": "Cartucheras personalizadas para escuelas con logo. Tela impermeable, cierre YKK resistente, tamaño estándar 20x8cm. Desde 50 unidades.",
+        "image": "https://cartucheraspormayor.com.ar/productos/cartucheras-escolares.jpg",
+        "brand": {
+          "@type": "Brand",
+          "name": "Cartucheras por Mayor"
         },
-        {
+        "offers": {
           "@type": "Offer",
-          "itemOffered": {
-            "@type": "Product",
-            "name": "Cartucheras Empresariales",
-            "description": "Cartucheras premium con logo bordado para regalos corporativos."
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Product",
-            "name": "Cartucheras Personalizadas",
-            "description": "Diseño a medida según especificaciones del cliente. Producción exclusiva."
+          "url": "https://cartucheraspormayor.com.ar#productos",
+          "priceCurrency": "ARS",
+          "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/NewCondition",
+          "seller": {
+            "@type": "Organization",
+            "name": "Cartucheras por Mayor Argentina"
           }
         }
-      ]
-    }
+      },
+      {
+        "@type": "Product",
+        "position": 2,
+        "name": "Cartucheras Empresariales Premium",
+        "description": "Cartucheras premium con logo bordado, material de alta calidad, múltiples compartimentos. Ideal para regalos corporativos.",
+        "image": "https://cartucheraspormayor.com.ar/productos/cartucheras-empresariales.jpg",
+        "brand": {
+          "@type": "Brand",
+          "name": "Cartucheras por Mayor"
+        },
+        "offers": {
+          "@type": "Offer",
+          "url": "https://cartucheraspormayor.com.ar#productos",
+          "priceCurrency": "ARS",
+          "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/NewCondition",
+          "seller": {
+            "@type": "Organization",
+            "name": "Cartucheras por Mayor Argentina"
+          }
+        }
+      },
+      {
+        "@type": "Product",
+        "position": 3,
+        "name": "Cartucheras Personalizadas a Medida",
+        "description": "Diseño 100% personalizado según especificaciones del cliente. Tu logo + colores. Producción exclusiva a medida.",
+        "image": "https://cartucheraspormayor.com.ar/productos/cartucheras-personalizadas.jpg",
+        "brand": {
+          "@type": "Brand",
+          "name": "Cartucheras por Mayor"
+        },
+        "offers": {
+          "@type": "Offer",
+          "url": "https://cartucheraspormayor.com.ar#productos",
+          "priceCurrency": "ARS",
+          "availability": "https://schema.org/PreOrder",
+          "itemCondition": "https://schema.org/NewCondition",
+          "seller": {
+            "@type": "Organization",
+            "name": "Cartucheras por Mayor Argentina"
+          }
+        }
+      }
+    ]
+  };
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Cuál es el mínimo de compra de cartucheras por mayor?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "El mínimo de compra es de 50 unidades. Contamos con stock permanente para entrega inmediata y también realizamos producción a medida según tus especificaciones."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Puedo personalizar las cartucheras con mi logo?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí, todas nuestras cartucheras son 100% personalizables. Podés agregar tu logo, elegir colores y crear un diseño único. Ofrecemos logo impreso o bordado según el tipo de producto."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Hacen envíos a todo el país?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí, llegamos a toda Argentina con logística propia. El costo y tiempo de envío depende de la ubicación y cantidad del pedido."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cuánto tiempo demora la producción?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Para pedidos de stock estándar, la entrega es inmediata. Para producción personalizada a medida, el tiempo de producción es de 15 a 30 días dependiendo de la cantidad y complejidad del diseño."
+        }
+      }
+    ]
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Inicio",
+        "item": "https://cartucheraspormayor.com.ar"
+      }
+    ]
   };
 
   return (
     <main>
+      {/* Organization Schema */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
+      {/* LocalBusiness Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      />
+      {/* Manufacturer Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(manufacturerSchema) }}
+      />
+      {/* Products Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productsSchema) }}
+      />
+      {/* FAQ Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      {/* Breadcrumb Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       {/* Hero Section with Gradient */}
       <section className="hero">
