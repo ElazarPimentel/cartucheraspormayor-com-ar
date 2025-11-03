@@ -44,7 +44,7 @@ main {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 24px;
 }
@@ -54,12 +54,12 @@ main {
    =================================== */
 .hero {
   position: relative;
-  min-height: 100vh;
+  min-height: 60vh;
   display: flex;
   align-items: center;
   background: var(--gradient-rainbow);
   overflow: hidden;
-  padding: 80px 0 120px;
+  padding: 60px 0 80px;
 }
 
 .hero::before {
@@ -496,7 +496,95 @@ main {
 .cta-content > p {
   font-size: clamp(1.1rem, 2vw, 1.5rem);
   color: rgba(255, 255, 255, 0.9);
-  margin-bottom: 40px;
+  margin-bottom: 50px;
+}
+
+.contact-bubbles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto 40px;
+  position: relative;
+}
+
+.contact-bubble {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 24px 30px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  text-decoration: none;
+  color: var(--text-dark);
+  transition: all 0.4s ease;
+  border: 3px solid transparent;
+  animation: floatBubble 4s ease-in-out infinite;
+}
+
+.bubble-1 { animation-delay: 0s; }
+.bubble-2 { animation-delay: 0.5s; }
+.bubble-3 { animation-delay: 1s; }
+.bubble-4 { animation-delay: 1.5s; }
+
+@keyframes floatBubble {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-15px) rotate(1deg);
+  }
+  50% {
+    transform: translateY(-5px) rotate(-1deg);
+  }
+  75% {
+    transform: translateY(-10px) rotate(0.5deg);
+  }
+}
+
+.contact-bubble:hover {
+  transform: translateY(-10px) scale(1.05) !important;
+  box-shadow: 0 20px 60px rgba(102, 126, 234, 0.5);
+  border-color: var(--color-purple);
+  background: white;
+}
+
+.bubble-icon {
+  font-size: 48px;
+  flex-shrink: 0;
+  animation: rotateBubble 3s ease-in-out infinite;
+}
+
+@keyframes rotateBubble {
+  0%, 100% { transform: rotate(0deg) scale(1); }
+  50% { transform: rotate(5deg) scale(1.1); }
+}
+
+.contact-bubble:hover .bubble-icon {
+  animation: rotateBubble 0.5s ease-in-out infinite;
+}
+
+.bubble-text {
+  text-align: left;
+  flex-grow: 1;
+}
+
+.bubble-label {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-purple);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.bubble-value {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-dark);
+  word-break: break-word;
 }
 
 .contact-info {
@@ -544,6 +632,36 @@ footer p {
   text-decoration: underline;
 }
 
+.footer-credit {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background: rgba(102, 126, 234, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 50px;
+  border: 2px solid rgba(102, 126, 234, 0.3);
+  transition: all 0.3s ease;
+}
+
+.footer-credit:hover {
+  background: rgba(102, 126, 234, 0.25);
+  border-color: rgba(102, 126, 234, 0.5);
+  transform: translateY(-2px);
+}
+
+.footer-credit a {
+  color: var(--color-blue);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.footer-credit a:hover {
+  color: var(--color-pink);
+  text-decoration: none;
+}
+
 /* ===================================
    INSTAGRAM SECTION
    =================================== */
@@ -553,51 +671,28 @@ footer p {
   position: relative;
 }
 
-.instagram-intro {
-  text-align: center;
-  font-size: 1.25rem;
-  color: var(--text-dark);
-  margin-bottom: 3rem;
-  padding: 1.5rem 2rem;
-  background: linear-gradient(135deg, rgba(102, 126, 234, 0.08) 0%, rgba(118, 75, 162, 0.12) 100%);
-  border-radius: var(--radius-md);
-  border: 2px solid rgba(102, 126, 234, 0.2);
-  font-weight: 500;
-  box-shadow: var(--shadow-sm);
-}
-
-.instagram-intro a {
-  color: var(--color-purple);
-  font-weight: 700;
-  text-decoration: none;
+.instagram-title {
+  display: inline-block;
+  padding: 20px 50px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 10px 40px rgba(102, 126, 234, 0.3), 0 4px 12px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
   position: relative;
-  transition: all 0.3s ease;
-  font-size: 1.35rem;
 }
 
-.instagram-intro a::before {
-  content: '📸 ';
-  margin-right: 0.25rem;
-}
-
-.instagram-intro a::after {
+.instagram-title::before {
   content: '';
   position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 0;
-  height: 3px;
-  background: var(--gradient-primary);
-  transition: width 0.3s ease;
-}
-
-.instagram-intro a:hover {
-  color: var(--color-pink);
-  transform: translateY(-2px);
-}
-
-.instagram-intro a:hover::after {
-  width: 100%;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: var(--radius-lg);
+  z-index: -1;
+  box-shadow: 0 10px 40px rgba(102, 126, 234, 0.3), 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .instagram-carousel {
@@ -801,7 +896,7 @@ footer p {
 @media (max-width: 768px) {
   .hero {
     min-height: auto;
-    padding: 60px 0 80px;
+    padding: 40px 0 60px;
   }
 
   .hero-visual {
@@ -816,6 +911,11 @@ footer p {
   .btn-secondary {
     width: 100%;
     text-align: center;
+  }
+
+  .contact-bubbles {
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
 
   .features-grid {

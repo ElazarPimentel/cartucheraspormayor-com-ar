@@ -109,16 +109,37 @@ export default function Home() {
           <div className="cta-content">
             <h2>¿Listo para tu pedido?</h2>
             <p>Cotización en menos de 24hs • Sin compromiso • Asesoramiento personalizado</p>
-            <div className="cta-buttons">
-              <a href="https://wa.me/541156567373" className="btn-primary btn-large">
-                📱 WhatsApp: 11-5656-7373
+            <div className="contact-bubbles">
+              <a href="https://wa.me/541156567373" className="contact-bubble bubble-1">
+                <div className="bubble-icon">📱</div>
+                <div className="bubble-text">
+                  <div className="bubble-label">WhatsApp</div>
+                  <div className="bubble-value">11-5656-7373</div>
+                </div>
               </a>
-              <a href="mailto:FabricamosMochilas@gmail.com" className="btn-secondary btn-large">
-                📧 Email
+              <a href="mailto:FabricamosMochilas@gmail.com" className="contact-bubble bubble-2">
+                <div className="bubble-icon">📧</div>
+                <div className="bubble-text">
+                  <div className="bubble-label">Email</div>
+                  <div className="bubble-value">FabricamosMochilas@gmail.com</div>
+                </div>
+              </a>
+              <a href="tel:+541156567373" className="contact-bubble bubble-3">
+                <div className="bubble-icon">📞</div>
+                <div className="bubble-text">
+                  <div className="bubble-label">Teléfono</div>
+                  <div className="bubble-value">(11) 5656-7373</div>
+                </div>
+              </a>
+              <a href="https://www.instagram.com/fabricamosmochilas/" target="_blank" rel="noopener noreferrer" className="contact-bubble bubble-4">
+                <div className="bubble-icon">📸</div>
+                <div className="bubble-text">
+                  <div className="bubble-label">Instagram</div>
+                  <div className="bubble-value">@fabricamosmochilas</div>
+                </div>
               </a>
             </div>
             <div className="contact-info">
-              <span>📞 (11) 5656-7373</span>
               <span>📍 Fabricamos en Argentina</span>
               <span>⭐ +10 años en el mercado</span>
               <span>💯 Garantía de calidad</span>
@@ -131,11 +152,8 @@ export default function Home() {
       <section className="instagram-section">
         <div className="container">
           <h2 className="section-title">
-            <span className="gradient-text">Nuestros Trabajos</span>
+            <span className="gradient-text instagram-title">Nuestros Trabajos</span>
           </h2>
-          <p className="instagram-intro">
-            Seguinos en <a href="https://www.instagram.com/fabricamosmochilas/" target="_blank" rel="noopener noreferrer">@fabricamosmochilas</a>
-          </p>
           <InstagramFeedSection />
         </div>
       </section>
