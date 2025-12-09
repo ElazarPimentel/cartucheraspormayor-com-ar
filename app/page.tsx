@@ -15,11 +15,15 @@ export default function Home() {
     "telephone": "+54-11-5656-7373",
     "address": {
       "@type": "PostalAddress",
-      "addressCountry": "AR",
-      "addressLocality": "Argentina"
+      "streetAddress": "José Bonifacio 454",
+      "addressLocality": "Buenos Aires",
+      "addressRegion": "Buenos Aires",
+      "postalCode": "C1424",
+      "addressCountry": "AR"
     },
     "sameAs": [
-      "https://www.instagram.com/fabricamosmochilas"
+      "https://www.instagram.com/fabricamosmochilas",
+      "https://maps.app.goo.gl/nRBQGxRU6uJehsyf8"
     ],
     "contactPoint": {
       "@type": "ContactPoint",
@@ -43,12 +47,16 @@ export default function Home() {
     "image": "https://cartucheraspormayor.com.ar/og-image.png",
     "address": {
       "@type": "PostalAddress",
-      "addressCountry": "AR",
-      "addressLocality": "Argentina"
+      "streetAddress": "José Bonifacio 454",
+      "addressLocality": "Buenos Aires",
+      "addressRegion": "Buenos Aires",
+      "postalCode": "C1424",
+      "addressCountry": "AR"
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "addressCountry": "AR"
+      "latitude": "-34.6269062",
+      "longitude": "-58.4334097"
     },
     "areaServed": {
       "@type": "Country",
