@@ -262,7 +262,7 @@ export default function Home() {
               Personalizá con tu logo • Stock permanente • Entrega inmediata
             </p>
             <div className="cta-buttons">
-              <a href="https://wa.me/541156567373" className="btn-primary">
+              <a href="https://wa.me/541156567373?text=Hola! Escribo desde cartucheraspormayor.com.ar - Me interesa consultar sobre cartucheras por mayor." className="btn-primary">
                 📱 Pedí tu Cotización
               </a>
               <a href="#productos" className="btn-secondary">
@@ -295,7 +295,7 @@ export default function Home() {
             <h2>¿Listo para tu pedido?</h2>
             <p>Cotización en menos de 24hs • Sin compromiso • Asesoramiento personalizado</p>
             <div className="contact-bubbles">
-              <a href="https://wa.me/541156567373" className="contact-bubble bubble-1">
+              <a href="https://wa.me/541156567373?text=Hola! Escribo desde cartucheraspormayor.com.ar - Me interesa consultar sobre cartucheras por mayor." className="contact-bubble bubble-1">
                 <div className="bubble-icon">📱</div>
                 <div className="bubble-text">
                   <div className="bubble-label">WhatsApp</div>
@@ -388,7 +388,7 @@ export default function Home() {
                 <li>Tamaño estándar 20x8cm</li>
                 <li>Desde 50 unidades</li>
               </ul>
-              <a href="https://wa.me/541156567373?text=Hola! Me interesa cotizar cartucheras escolares" className="product-cta">
+              <a href="https://wa.me/541156567373?text=Hola! Escribo desde cartucheraspormayor.com.ar - Me interesa cotizar cartucheras escolares." className="product-cta">
                 Cotizar ahora →
               </a>
             </div>
@@ -403,7 +403,7 @@ export default function Home() {
                 <li>Múltiples compartimentos</li>
                 <li>Ideal para regalos corporativos</li>
               </ul>
-              <a href="https://wa.me/541156567373?text=Hola! Me interesa cotizar cartucheras empresariales" className="product-cta">
+              <a href="https://wa.me/541156567373?text=Hola! Escribo desde cartucheraspormayor.com.ar - Me interesa cotizar cartucheras empresariales." className="product-cta">
                 Cotizar ahora →
               </a>
             </div>
@@ -418,7 +418,7 @@ export default function Home() {
                 <li>Producción exclusiva</li>
                 <li>Sin mínimo de compra*</li>
               </ul>
-              <a href="https://wa.me/541156567373?text=Hola! Me interesa cotizar cartucheras personalizadas" className="product-cta">
+              <a href="https://wa.me/541156567373?text=Hola! Escribo desde cartucheraspormayor.com.ar - Me interesa cotizar cartucheras personalizadas." className="product-cta">
                 Cotizar ahora →
               </a>
             </div>

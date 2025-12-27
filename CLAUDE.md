@@ -502,3 +502,10 @@ import type { InstagramPost } from '@/lib/instagram';
 
 **Port Assignment**: 3201 (local dev only)
 **Production URL**: https://cartucheraspormayor.com.ar
+
+---
+
+## Cross-Site Task Tracking
+
+Before starting work, read `../borisiuk-tasks.yaml` for pending tasks.
+After completing a task, update this domain's status in that file.
