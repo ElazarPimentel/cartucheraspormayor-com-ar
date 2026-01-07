@@ -1,9 +1,9 @@
 {
   "site_url": "sc-domain:cartucheraspormayor.com.ar",
-  "generated_at": "2026-01-02T21:25:01.862140",
+  "generated_at": "2026-01-05T23:49:15.346728",
   "period": {
-    "start": "2025-12-05",
-    "end": "2026-01-02",
+    "start": "2025-12-08",
+    "end": "2026-01-05",
     "days": 28
   },
   "data": {
@@ -22,9 +22,9 @@
           "cartucheras personalizadas"
         ],
         "clicks": 0,
-        "impressions": 5,
+        "impressions": 4,
         "ctr": 0,
-        "position": 23
+        "position": 23.2
       },
       {
         "keys": [
@@ -51,8 +51,8 @@
           "https://cartucheraspormayor.com.ar/"
         ],
         "clicks": 2,
-        "impressions": 21,
-        "ctr": 0.0952,
+        "impressions": 19,
+        "ctr": 0.1053,
         "position": 13.7
       }
     ],
@@ -62,39 +62,21 @@
           "MOBILE"
         ],
         "clicks": 2,
-        "impressions": 11,
-        "ctr": 0.1818,
-        "position": 11.7
+        "impressions": 10,
+        "ctr": 0.2,
+        "position": 10.7
       },
       {
         "keys": [
           "DESKTOP"
         ],
         "clicks": 0,
-        "impressions": 10,
+        "impressions": 9,
         "ctr": 0,
-        "position": 15.9
+        "position": 17.1
       }
     ],
     "daily_28d": [
-      {
-        "keys": [
-          "2025-12-05"
-        ],
-        "clicks": 0,
-        "impressions": 1,
-        "ctr": 0,
-        "position": 2
-      },
-      {
-        "keys": [
-          "2025-12-07"
-        ],
-        "clicks": 0,
-        "impressions": 2,
-        "ctr": 0,
-        "position": 13
-      },
       {
         "keys": [
           "2025-12-08"
@@ -202,15 +184,37 @@
         "impressions": 1,
         "ctr": 0,
         "position": 8
+      },
+      {
+        "keys": [
+          "2026-01-03"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 1
       }
-    ]
+    ],
+    "url_inspection": {
+      "total_inspected": 1,
+      "not_indexed_count": 0,
+      "not_indexed": [],
+      "all_results": [
+        {
+          "url": "https://cartucheraspormayor.com.ar/",
+          "error": "<HttpError 403 when requesting https://searchconsole.googleapis.com/v1/urlInspection/index:inspect?alt=json returned \"You do not own this site, or the inspected URL is not part of this property.\". Details: \"You do not own this site, or the inspected URL is not part of this property.\">",
+          "verdict": "ERROR"
+        }
+      ]
+    }
   },
   "summary": {
     "total_clicks_28d": 0,
-    "total_impressions_28d": 9,
+    "total_impressions_28d": 8,
     "average_ctr_28d": 0.0,
     "total_queries": 4,
-    "total_pages": 1
+    "total_pages": 1,
+    "not_indexed_count": 0
   },
   "folder_name": "cartucheraspormayor-com-ar"
 }

@@ -437,8 +437,8 @@ export default function Home() {
               <path d="M2 17l10 5 10-5M2 12l10 5 10-5" />
             </svg>
             Digitally carved by{' '}
-            <a href="https://Pensanta.com" target="_blank" rel="noopener noreferrer">
-              Pensanta.com
+            <a href="https://ElazarPimentel.com" target="_blank" rel="noopener noreferrer">
+              ElazarPimentel.com
             </a>
           </small>
         </div>
