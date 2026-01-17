@@ -1,48 +1,23 @@
 'use client';
 
-import { useEffect, useState } from 'react';
-import { groupHashtags, type HashtagGroup } from '@/lib/hashtag-grouper';
+import { useEffect } from 'react';
+import type { HashtagGroup } from '@/lib/hashtag-grouper';
 
-export default function InstagramFeedSection() {
-  const [groups, setGroups] = useState<HashtagGroup[]>([]);
-  const [loading, setLoading] = useState(true);
+interface InstagramFeedSectionProps {
+  groups: HashtagGroup[];
+}
 
+export default function InstagramFeedSection({ groups }: InstagramFeedSectionProps) {
   useEffect(() => {
-    console.log("[cartucheraspormayor-com-ar] VERSION: 1.0.1");
-    async function loadAndGroupPosts() {
-      try {
-        // Fetch all posts from the API
-        const response = await fetch('/api/instagram/all');
-        if (!response.ok) {
-          throw new Error('Failed to fetch posts');
-        }
-
-        const data = await response.json();
-        const posts = data.data || [];
-
-        // Apply smart grouping algorithm
-        const groupedData = groupHashtags(posts);
-        setGroups(groupedData);
-      } catch (error) {
-        console.error('Error loading and grouping posts:', error);
-      } finally {
-        setLoading(false);
-      }
-    }
-
-    loadAndGroupPosts();
+    console.log("[cartucheraspormayor-com-ar] VERSION: 1.0.2 (ISR)");
   }, []);
 
-  if (loading) {
+  if (!groups || groups.length === 0) {
     return (
       <div className="carousel-loading">
         <p>Cargando productos...</p>
       </div>
     );
-  }
-
-  if (groups.length === 0) {
-    return null;
   }
 
   return (

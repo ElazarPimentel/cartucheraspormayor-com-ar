@@ -1,6 +1,59 @@
 import InstagramFeedSection from './components/InstagramFeedSection';
+import { groupHashtags, type HashtagGroup } from '@/lib/hashtag-grouper';
 
-export default function Home() {
+// ISR: Revalidate every 48 hours
+export const revalidate = 172800;
+
+interface InstagramPost {
+  id: string;
+  caption?: string;
+  media_type: "IMAGE" | "VIDEO" | "CAROUSEL_ALBUM";
+  media_url: string;
+  permalink: string;
+  thumbnail_url?: string;
+  timestamp: string;
+  like_count?: number;
+  comments_count?: number;
+}
+
+async function getInstagramPosts(): Promise<HashtagGroup[]> {
+  try {
+    const apiKey = process.env.API_KEY;
+    const apiUrl = "https://www.pensanta.com.ar/borisiuk/api/api/instagram?site=cartucheraspormayor&limit=50";
+
+    if (!apiKey) {
+      console.error("[Instagram API] CRITICAL: API_KEY environment variable is NOT SET!");
+      return [];
+    }
+
+    const response = await fetch(apiUrl, {
+      headers: {
+        'X-API-Key': apiKey,
+      },
+      next: { revalidate: 172800 },
+    });
+
+    if (!response.ok) {
+      console.error(`Instagram API error: ${response.status}`);
+      return [];
+    }
+
+    const data = await response.json();
+
+    if (data.success && data.data) {
+      // Apply smart grouping algorithm
+      return groupHashtags(data.data);
+    }
+
+    return [];
+  } catch (error) {
+    console.error("Failed to fetch Instagram posts:", error);
+    return [];
+  }
+}
+
+export default async function Home() {
+  const groups = await getInstagramPosts();
   // Multiple Schema.org structured data types for enhanced SEO
   const organizationSchema = {
     "@context": "https://schema.org",
@@ -339,7 +392,7 @@ export default function Home() {
           <h2 className="section-title">
             <span className="gradient-text instagram-title">Nuestros Trabajos</span>
           </h2>
-          <InstagramFeedSection />
+          <InstagramFeedSection groups={groups} />
         </div>
       </section>
 
@@ -430,7 +483,7 @@ export default function Home() {
       <footer role="contentinfo">
         <div className="footer-content">
           <p className="footer-copyright">&copy; {new Date().getFullYear()} Cartucheras por Mayor - Todos los derechos reservados</p>
-          <p className="footer-version">v1.0.1</p>
+          <p className="footer-version">v1.0.2</p>
           <small className="footer-credit">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <path d="M12 2L2 7l10 5 10-5-10-5z" />
